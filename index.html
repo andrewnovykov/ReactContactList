@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.0/react.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.0/react-dom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.6.15/browser.js"></script>
+</head>
+<body>
+	<div id="content">
+		<script type="text/babel">
+			var HelloWorld = React.createClass({
+				render: function(){
+					return <h1> My name is {this.props.name} and I love {this.props.action} !</h1>;
+				}
+			});
+
+
+			ReactDOM.render(	
+				<div>
+					<HelloWorld name="alex" action="1"/>
+					<HelloWorld name="ivan" action="2"/>
+					<HelloWorld name="kolya" action="3"/>
+					<HelloWorld name="alex2" action="4"/>
+				</div>,
+				document.getElementById("content")				
+			);
+		</script>
+	</div>
+</body>
+</html>
